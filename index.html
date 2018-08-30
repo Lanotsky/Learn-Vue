@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- dev-vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue-basics</title>
+</head>
+<body>
+    <h1>The title: {{message}}</h1>
+
+    <!-- binds  + new Date().toLocaleString() to this element on hover -->
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+
+    <!-- conditionals -->
+    <div id="app-3">
+        <span v-if="seen">
+            SHOW ME!
+        </span>
+    </div>
+</body>
+<script src="./assets/js/vue.js"></script>
+</html>

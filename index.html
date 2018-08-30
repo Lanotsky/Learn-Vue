@@ -12,18 +12,52 @@
     <h1>The title: {{message}}</h1>
 
     <!-- binds  + new Date().toLocaleString() to this element on hover -->
-    <div id="app-2">
+    <div id="binding">
         <span v-bind:title="message">
             Hover your mouse over me for a few seconds to see my dynamically bound title!
         </span>
     </div>
 
     <!-- conditionals -->
-    <div id="app-3">
+    <div id="conditionals">
         <span v-if="seen">
             SHOW ME!
         </span>
     </div>
+
+    <div id="loops">
+        <ol>
+        <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <div id="user-input">
+        <input v-model="message">
+        <p>{{message}}</p>
+        <button v-on:click="reverseString">Reverse Message</button>
+    </div>
+
+    <div id="vue-component">
+        <ul>
+            <todo-item 
+                v-for="item in groceryList" 
+                v-bind:todo="item" 
+                v-bind:key="item.id">
+            </todo-item>
+        </ul>
+    </div>
+
+    <div id="img-component">
+        <img-component 
+            v-for="item in imageList"
+            v-bind:image="item"
+            v-bind:key="item.id">
+        </img-component>
+    </div>
+    
+    
 </body>
 <script src="./assets/js/vue.js"></script>
 </html>

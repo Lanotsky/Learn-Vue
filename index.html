@@ -41,6 +41,9 @@
 
     <div id="vue-component">
         <ul>
+            <!-- for every item in the groceryList array
+                bind each one as a todo prop
+                bind each key -->
             <todo-item 
                 v-for="item in groceryList" 
                 v-bind:todo="item" 
